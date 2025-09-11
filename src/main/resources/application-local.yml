@@ -1,0 +1,23 @@
+#server settings
+server:
+  env: dev
+  port: 8097
+
+#mongo database configuration for device management
+#Mongo DB settings
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/resumeAnalyser
+      host: localhost
+      port: 27017
+      #authentication db
+      authenticationDatabase: admin
+      username: myuser
+      # password should be in encrypted form ,
+      password: ENC(ldhbRS5u6SKs1fFTNRLYLJ+L8P6EtEOVPXnkKPvOStxR+zkUJqx8kBzg5UbxxVO4)
+      #database name
+      database: resumeAnalyser
+      socketTimeout: 50000
+      connectTimeout: 50000
+

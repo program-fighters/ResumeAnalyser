@@ -3,10 +3,12 @@ package org.example.config;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.autoconfigure.mongo.MongoProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Setter
 @Component
+@ConfigurationProperties(prefix = "spring.data.mongodb")
 public class MongodbProperties extends MongoProperties {
     private Integer socketTimeout;
     @Getter

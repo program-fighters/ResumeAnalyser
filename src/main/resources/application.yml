@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ResumeAnalyserApp
+  #profiles
+  profiles:
+    active: "local"
+    main:
+      banner-mode: "off"
+
+#encryption tool salt
+jasypt:
+  encryptor:
+    password: Progr@mFighter
+
