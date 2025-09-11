@@ -1,4 +1,4 @@
-package org.example.web.controller;
+package org.example.web.resource;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.AllArgsConstructor;
@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HealthController extends BaseController {
+public class HomeResource extends BaseResource {
 
-    @GetMapping(UrlConstants.APP_HEALTH)
-    public ResponseEntity<?> home() {
+    @GetMapping(UrlConstants.APP_GREETING)
+    public ResponseEntity<?> greeting() {
         return ResponseEntity
                 .ok()
-                .body(AppInfo
+                .body(GreetingResponseDto
                         .builder()
                         .info("welcome to resume Analyser")
                         .version("0.0.1-beta")
@@ -35,7 +35,7 @@ public class HealthController extends BaseController {
     @AllArgsConstructor
     @Builder
     @JsonPropertyOrder({"version", "info"})
-    private static class AppInfo {
+    private static class GreetingResponseDto {
         String info;
         String version;
     }

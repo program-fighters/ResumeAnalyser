@@ -1,4 +1,4 @@
-package org.example.web.controller;
+package org.example.web.resource;
 
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-public abstract class BaseController {
+public abstract class BaseResource {
     @Autowired
     protected FileManager fileManager;
 
